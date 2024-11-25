@@ -1,101 +1,173 @@
-import Image from "next/image";
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <main className="min-h-screen bg-[#4230d7]">
+      {/* Hero Section */}
+      <nav className="absolute top-0 w-full z-10 p-4 flex justify-between items-center">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/logo.svg"
+          alt="Experience In Motion"
+          className="object-cover"
+          width={100}
+          height={50}
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        {/*<h1 className="text-white text-xl font-light">Exotion</h1>*/} {/*<Button variant="ghost" className="text-white hover:text-white/80 text-lg">*/} {/*  Login*/} {/*</Button>*/}
+      </nav>
+
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          {/*<Image*/} {/*  src="/banner.jpg"*/} {/*  alt="Experience In Motion"*/} {/*  fill*/} {/*  className="object-cover"*/} {/*  priority*/} {/*/>*/}
+
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{transform: 'scale(1.5)'}}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <source src="/exploring.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+        <div className="relative z-1 text-center text-white space-y-6 p-4">
+          <h2 className="text-5xl md:text-7xl font-light">Experience In Motion</h2>
+          <Button variant="secondary" className="rounded-none w-36" size="lg"> RSVP </Button>
+        </div>
+      </section>
+
+      {/* Fine Drinks Section */}
+      <section className="py-20 px-4 md:px-20 bg-[#4230d7] text-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-24 items-center justify-between">
+          <div className="space-y-6">
+            <h2 className="text-4xl md:text-6xl font-light">Fine Drinks</h2>
+            <p className="text-lg text-white/80">
+              We'll be mixing tiki classics and some new creations using top-shelf spirits and organic mixers. Not a
+              tipper? Not to worry—we'll have a full menu of delicious mocktails on offer, too.
+            </p>
+          </div>
+
+          <div className="flex">
+              <Image
+                src="/home.png"
+                alt="Elegant cocktails on table"
+                width={250}
+                height={300}
+                className="rounded-lg mr-9"
+              />
+
+              <Image
+                src="/challengePreview.png"
+                alt="Elegant cocktails on table"
+                width={250}
+                height={300}
+                className="rounded-lg"
+              />
+          </div>
+        </div>
+      </section>
+
+      {/* Good Vibes Section */}
+      <section className="py-20 px-4 md:px-20 bg-[#6149c6] text-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+          <div className="space-y-6 md:order-2">
+            <h2 className="text-4xl md:text-6xl font-light">Good Vibes</h2>
+            <p className="text-lg text-white/80">
+              Look out for guest DJs spinning vintage bossa nova and deep house, party games, a tiki photo booth and a
+              top secret live performance right as the clock strikes midnight. Don't miss the fun!
+            </p>
+          </div>
+
+          <div className="flex">
+            <Image
+              src="/GeneralProfile.png"
+              alt="Elegant cocktails on table"
+              width={250}
+              height={300}
+              className="rounded-lg mr-9"
+            />
+
+            <Image
+              src="/AboutChallenge.png"
+              alt="Elegant cocktails on table"
+              width={250}
+              height={300}
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Third Section */}
+      <section className="py-20 px-4 md:px-20 bg-[#4230d7] text-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+          <div className="space-y-6">
+            <h2 className="text-4xl md:text-6xl font-light">Fine Drinks</h2>
+            <p className="text-lg text-white/80">
+              We'll be mixing tiki classics and some new creations using top-shelf spirits and organic mixers. Not a
+              tipper? Not to worry—we'll have a full menu of delicious mocktails on offer, too.
+            </p>
+          </div>
+
+          <div className="flex">
+            <Image
+              src="/home.png"
+              alt="Elegant cocktails on table"
+              width={250}
+              height={300}
+              className="rounded-lg mr-9"
+            />
+
+            <Image
+              src="/challengePreview.png"
+              alt="Elegant cocktails on table"
+              width={250}
+              height={300}
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* RSVP Section */}
+      <section className="relative h-screen flex items-center justify-center bg-[#101828]">
+        <div className="relative z-1 text-center text-white space-y-6 p-4 max-w-2xl mx-auto">
+          <h2 className="text-5xl md:text-7xl font-light">RSVP</h2>
+          <p className="text-lg">
+            Stay in the Loop: Subscribe Now to Get Updates and Be the First to Know When Our App is Ready!
+          </p>
+
+          <div className="flex items-center mt-1">
+            <input type="email" id="input-9"
+                   className="w-full h-10 px-3 text-sm text-gray-700 focus:outline-none shadow-sm"
+                   placeholder="Subscribe to stay tune..." />
+            <button
+              className="h-10 px-4 text-sm bg-[#4230d7] border border-l-0 border-[#4230d7] shadow-sm text-blue-50 hover:text-white hover:bg-blue-400 hover:border-blue-400 focus:outline-none">Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <footer className="py-20 px-4 bg-[#4230d7] text-white text-center">
+        <div className="max-w-6xl mx-auto space-y-6">
+          <h3 className="text-sm uppercase tracking-wider">Location</h3>
+          <p className="text-4xl md:text-6xl font-light">Germany</p>
+          <p className="text-4xl md:text-6xl font-light">Cologne</p>
+        </div>
       </footer>
-    </div>
-  );
+
+      {/* Subscription Banner */}
+      <div className="fixed bottom-0 w-full bg-[#101828] text-white p-4 flex justify-between items-center text-sm">
+        <p>We Use Cookies to Enhance Your Experience and Protect Your Privacy!.</p>
+        <Button variant="secondary" className="rounded-none" size="sm">
+          Accept Cookies
+        </Button>
+      </div>
+    </main>
+  )
 }
