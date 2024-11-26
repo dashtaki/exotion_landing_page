@@ -40,15 +40,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#4230d7]">
       <Menu/>
-
       <Banner/>
-
       {SECTIONS.map((item, i) => (<Section key={i} {...item} />))}
-
       <SubscribeEmail/>
-
       <Footer/>
-
       <CookieBanner/>
     </main>
   )
