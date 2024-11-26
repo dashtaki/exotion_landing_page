@@ -21,15 +21,15 @@ const SECTIONS: SectionProps[] = [
     index: 1
   },
   {
-    title: 'Make money',
-    description: 'Earn compensation for completing and sharing approved challenges.',
+    title: 'Profit from Your Adventures',
+    description: 'Earn money by designing exciting challenges based on your experiences and sharing them with others. When challengers take on and complete your tasks, and their submissions are approved, you receive compensation. It’s a rewarding way to inspire others while profiting from your creativity!',
     images: ['/Dashboard.png', '/ChallengePreview.png'],
     rtl: true,
     index: 2
   },
   {
-    title: 'Be a challenger',
-    description: 'Take on exciting tasks, complete them, and showcase your adventurous spirit.',
+    title: 'Step up and Be a challenger',
+    description: 'Step into the role of a challenger by taking on thrilling tasks, completing them, and showcasing your adventurous side. Not only will you enjoy unique experiences, but you’ll also have the chance to earn money as a reward for your achievements.',
     images: ['/ChallengeDetail.png', '/ChallengeCompleted.png'],
     rtl: false,
     index: 3

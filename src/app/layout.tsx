@@ -28,8 +28,7 @@ export default function RootLayout({
 
 
 /* TODO List:
-- Add proper app screenshots
-- Change titles and description(take from BP)
+- // Later: Ask Saeed for proper screenshots
 - Change Logo To Exotion
 - Add contact to footer
 - Implement subscription
