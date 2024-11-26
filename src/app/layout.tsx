@@ -34,7 +34,6 @@ export default function RootLayout({
 - Add copyright to footer
    - inspiration  https://marketifythemes.net/html/grax/intro.html?storefront=envato-elements
    -              https://mauve-oval-34zc.squarespace.com/config/
-- Separate components
 - Implement Cookies
 - Add GoogleAnalytics
 - Implement subscription
