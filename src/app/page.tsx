@@ -3,7 +3,6 @@ import Menu from "@/components/Menu";
 import Banner from '@/components/Banner'
 import SubscribeEmail from '@/components/SubscribeEmail'
 import Footer from '@/components/Footer'
-import CookieBanner from '@/components/CookieBanner'
 
 const SECTIONS: SectionProps[] = [
   {
@@ -44,7 +43,6 @@ export default function Home() {
       {SECTIONS.map((item, i) => (<Section key={i} {...item} />))}
       <SubscribeEmail/>
       <Footer/>
-      <CookieBanner/>
     </main>
   )
 }

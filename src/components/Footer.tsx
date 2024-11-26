@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="text-center mt-12 mb-6">
+      <div className="text-center mt-12">
         © Copyright {new Date().getFullYear()} - by Exotion
       </div>
     </footer>
