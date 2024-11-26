@@ -1,5 +1,3 @@
-import React from 'react';
-
 const SubscribeEmail = () => {
   return (
     <section className="relative h-screen flex items-center justify-center bg-[#101828]">

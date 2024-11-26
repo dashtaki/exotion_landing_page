@@ -30,7 +30,6 @@ export default function RootLayout({
 /* TODO List:
 - // Later: Ask Saeed for proper screenshots
 - Change Logo To Exotion
-- Add contact to footer
 - Implement subscription
 - Implement Cookies
 - Add GoogleAnalytics
