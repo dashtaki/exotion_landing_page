@@ -40,5 +40,4 @@ export default function RootLayout({
 - Change Logo To Exotion
 - Implement subscription
 - Add GoogleAnalytics
-- Add social medias to the footer
 * */
