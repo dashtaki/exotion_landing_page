@@ -1,8 +1,11 @@
+'use client'
+
 import Section, { SectionProps } from '@/components/Section'
 import Menu from "@/components/Menu";
 import Banner from '@/components/Banner'
 import SubscribeEmail from '@/components/SubscribeEmail'
 import Footer from '@/components/Footer'
+import { useRef } from 'react'
 
 const SECTIONS: SectionProps[] = [
   {
@@ -36,12 +39,18 @@ const SECTIONS: SectionProps[] = [
 ]
 
 export default function Home() {
+  const subscribeEmailRef = useRef(null);
+
+  const onScrollToSubscribeRef = () => subscribeEmailRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+
   return (
     <main className="min-h-screen bg-[#4230d7]">
       <Menu/>
-      <Banner/>
+      <Banner onButtonClick={onScrollToSubscribeRef}/>
       {SECTIONS.map((item, i) => (<Section key={i} {...item} />))}
-      <SubscribeEmail/>
+      <div ref={subscribeEmailRef}>
+        <SubscribeEmail />
+      </div>
       <Footer/>
     </main>
   )
