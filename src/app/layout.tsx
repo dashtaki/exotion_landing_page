@@ -40,4 +40,5 @@ export default function RootLayout({
 - Change Logo To Exotion
 - Implement subscription
 - Add GoogleAnalytics
+- Add prettier
 * */
