@@ -1,7 +1,6 @@
 'use client'
 
 import Section, { SectionProps } from '@/components/Section'
-import Menu from '@/components/Menu'
 import Banner from '@/components/Banner'
 import SubscribeEmail from '@/components/SubscribeEmail'
 import Footer from '@/components/Footer'
@@ -52,16 +51,15 @@ export default function Home() {
     })
 
   return (
-    <main className='min-h-screen bg-[#4230d7]'>
-      <Menu />
+    <main className='min-h-screen'>
       <Banner onButtonClick={onScrollToSubscribeRef} />
-      {SECTIONS.map((item, i) => (
-        <Section key={i} {...item} />
-      ))}
-      <div ref={subscribeEmailRef}>
-        <SubscribeEmail />
-      </div>
-      <Footer />
+      {/*{SECTIONS.map((item, i) => (*/}
+      {/*  <Section key={i} {...item} />*/}
+      {/*))}*/}
+      {/*<div ref={subscribeEmailRef}>*/}
+      {/*  <SubscribeEmail />*/}
+      {/*</div>*/}
+      {/*<Footer />*/}
     </main>
   )
 }
