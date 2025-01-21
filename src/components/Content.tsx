@@ -27,8 +27,8 @@ const Content = () => {
   }, [])
 
   return (
-    <section className="px-8 md:pl-12 lg:pl-20 ">
-      <div className="sticky top-32 h-0">
+    <section className="px-8 md:pl-12 lg:pl-20">
+      <div className="sticky top-0 h-0">
         <Image
           src={currentImage}
           alt={'props.title'}
