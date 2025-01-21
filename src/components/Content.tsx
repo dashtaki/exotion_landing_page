@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-import Section from '@/components/Section'
+import Section, { SectionDetail } from '@/components/Section'
 import { SECTIONS } from '@/contants'
 
 const Content = () => {
@@ -42,7 +42,7 @@ const Content = () => {
         />
       </div>
 
-      {SECTIONS.map((item, i) => (
+      {SECTIONS.map((item: SectionDetail, i: number) => (
         <Section
           key={i}
           index={i}

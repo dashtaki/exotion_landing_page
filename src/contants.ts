@@ -1,9 +1,9 @@
-import { SectionProps } from '@/components/Section'
+import { SectionDetail } from '@/components/Section'
 
 export const BRAND = 'Exotion'
 export const COOKIE_NAME = 'CookieConsent'
 
-export const SECTIONS: SectionProps[] = [
+export const SECTIONS: SectionDetail[] = [
   {
     title: 'Create a challenge',
     description:

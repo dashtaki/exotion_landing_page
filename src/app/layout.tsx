@@ -37,5 +37,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
 /* TODO List:
 - Change Logo To Exotion
-- Responsiveness
-* */
+- implement email subscription
+- google tag manager
+**/

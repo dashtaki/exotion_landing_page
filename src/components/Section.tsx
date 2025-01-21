@@ -1,14 +1,14 @@
 import React, { Ref } from 'react'
 import Image from 'next/image'
 
-export interface SectionProps {
-  index: number
+export interface SectionDetail {
+  index?: number
   title: string
   description: string
   sectionRef?: Ref<HTMLDivElement>;
 }
 
-const Section = ({ index, title, description, sectionRef }: SectionProps) => {
+const Section = ({ index, title, description, sectionRef }: SectionDetail) => {
   return (
     <section ref={sectionRef} className="py-8 md:py-48">
       <div className="grid-cols-1 w-full md:w-1/2">
