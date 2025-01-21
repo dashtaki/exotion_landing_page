@@ -3,15 +3,15 @@ import { BRAND } from '@/contants'
 const Footer = () => {
   return (
     <footer className='bg-brand-600 px-4 py-20 text-white'>
-      <div className='flex justify-around text-center'>
-        <div className='mx-auto max-w-6xl space-y-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-y-10'>
+        <div className='mx-auto max-w-6xl space-y-4 md:space-y-6 text-center'>
           <h3 className='text-sm uppercase tracking-wider'>Location</h3>
-          <p className='text-4xl font-light md:text-6xl'>Germany, Cologne</p>
+          <p className='text-3xl font-light'>Germany, Cologne</p>
         </div>
 
-        <div className='mx-auto max-w-6xl space-y-6'>
+        <div className='mx-auto max-w-6xl space-y-4 md:space-y-6 text-center'>
           <h3 className='text-sm uppercase tracking-wider'>Contact</h3>
-          <p className='text-4xl font-light md:text-6xl'>{`info@${BRAND}.com`}</p>
+          <p className='text-3xl font-light'>{`info@${BRAND}.com`}</p>
         </div>
       </div>
 
