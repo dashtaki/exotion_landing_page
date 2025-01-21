@@ -39,4 +39,5 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 - Change Logo To Exotion
 - implement email subscription
 - google tag manager
+- change favicon
 **/
