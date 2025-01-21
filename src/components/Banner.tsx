@@ -8,13 +8,7 @@ import { isValidEmail } from '@/lib/utils'
 import { SUBSCRIBE_URL } from '@/contants'
 import { toast } from '@/hooks/use-toast'
 
-enum SubscriptionStatus {
-  ERROR = 'ERROR',
-  SUCCESS = 'SUCCESS',
-}
-
 const Banner = () => {
-  const [status, setStatus] = useState<SubscriptionStatus | null>(null)
   const [isInvalidEmail, setIsInvalidEmail] = useState<boolean>(true)
   const [email, setEmail] = useState('')
 
@@ -50,10 +44,8 @@ const Banner = () => {
       const json = await response.json()
 
       if (json?.subscription?.id) {
-        setStatus(SubscriptionStatus.SUCCESS)
         setEmail('')
         setIsInvalidEmail(true)
-        setTimeout(() => setStatus(null), 3000)
 
         toast({
           title: 'Joined',
@@ -62,14 +54,12 @@ const Banner = () => {
         return
       }
 
-      setStatus(SubscriptionStatus.ERROR)
       toast({
         title: 'Oops',
         description: 'Something went wrong... Please, try again!',
       })
       console.error('Failed to subscribe')
     } catch (err) {
-      setStatus(SubscriptionStatus.ERROR)
       toast({
         title: 'Oops',
         description: 'Something went wrong... Please, try again!',
