@@ -51,6 +51,12 @@ export default {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+        brand: {
+          600: 'var(--brand-600)'
+        },
+        grey: {
+          900: 'var(--grey-900)',
+        }
       },
       borderRadius: {
         lg: 'var(--radius)',

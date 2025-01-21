@@ -1,20 +1,25 @@
 'use client'
 import './globals.css'
-import { Urbanist } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 import CookieConsent from 'react-cookie-consent'
 import { COOKIE_NAME } from '@/contants'
+// import { GoogleTagManager } from '@next/third-parties/google'
 
-const urbanist = Urbanist({
+const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
+  variable: '--font-poppins',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
 })
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang='en'>
-      <body className={cn(urbanist.className, 'antialiased')}>{children}</body>
+      <body className={cn(poppins.className, 'antialiased')}>{children}</body>
+
+      {/*{process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />}*/}
 
       <CookieConsent
         location='bottom'
@@ -31,8 +36,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 }
 
 /* TODO List:
-- // Later: Ask Saeed for proper screenshots
 - Change Logo To Exotion
-- Implement subscription
-- Add GoogleAnalytics
-* */
+- implement email subscription
+- google tag manager
+**/
