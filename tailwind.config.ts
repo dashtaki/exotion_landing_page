@@ -53,6 +53,9 @@ export default {
         },
         brand: {
           600: 'var(--brand-600)'
+        },
+        grey: {
+          900: 'var(--grey-900)',
         }
       },
       borderRadius: {

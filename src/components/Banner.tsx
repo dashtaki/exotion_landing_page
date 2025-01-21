@@ -3,7 +3,11 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { Input } from '@/components/ui/input'
 
-const Banner = (props: { onButtonClick: () => void }) => {
+const Banner = () => {
+  const joinWaitList = () => {
+    return null
+  }
+
   return (
     <div className="pt-12 md:pt-0 px-8 md:pl-12 lg:pl-20">
       <section className="grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:gap-20">
@@ -28,7 +32,7 @@ const Banner = (props: { onButtonClick: () => void }) => {
           <div className="grid grid-cols-2 gap-2 mt-10">
             <Input placeholder="Enter your email" className="col-start-1 col-end-4 md:col-start-1 md:col-end-4" />
             <Button
-              onClick={props.onButtonClick} className="col-start-1 col-end-4 md:col-start-4">Join Wait List</Button>
+              onClick={joinWaitList} className="col-start-1 col-end-4 md:col-start-4">Join Wait List</Button>
           </div>
         </div>
 
@@ -42,13 +46,14 @@ const Banner = (props: { onButtonClick: () => void }) => {
         </div>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full mt-32 gap-12">
-        <h2 className="text-3xl md:text-3xl lg:text-4xl text-center m-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full my-32 gap-12">
+        <h2 className="text-3xl md:text-5xl lg:text-4xl my-auto">
           Create and Complete <span className="font-bold">Challenges</span> Anywhere!
         </h2>
-        <p className="text-lg text-center md:text-start">Be My Guest connects you with a world of unique experiences. Create challenges, set
-          rewards, and let others capture the moments for you. Or, take on exciting challenges and earn rewards by
-          sharing your adventures!</p>
+
+        <p className="text-lg text-center md:text-start">Be My Guest connects you with a world of unique experiences.
+          Create challenges, set rewards, and let others capture the moments for you. Or, take on exciting challenges
+          and earn rewards by sharing your adventures!</p>
       </div>
     </div>
   )
