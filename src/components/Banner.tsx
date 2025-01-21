@@ -1,14 +1,83 @@
 'use client'
 
-import React from 'react'
+import React, { FormEvent, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { Input } from '@/components/ui/input'
+import { isValidEmail } from '@/lib/utils'
+import { SUBSCRIBE_URL } from '@/contants'
+import { toast } from '@/hooks/use-toast'
+
+enum SubscriptionStatus {
+  ERROR = 'ERROR',
+  SUCCESS = 'SUCCESS',
+}
 
 const Banner = () => {
-  const joinWaitList = () => {
-    return null
+  const [status, setStatus] = useState<SubscriptionStatus | null>(null)
+  const [isInvalidEmail, setIsInvalidEmail] = useState<boolean>(true)
+  const [email, setEmail] = useState('')
+
+  const onChangeEmail = (email: string) => {
+    setEmail(email)
+
+    setIsInvalidEmail(!isValidEmail(email))
   }
+
+  const joinWaitList = async (event: FormEvent) => {
+    event.preventDefault()
+
+    if (!isValidEmail(email)) {
+      setIsInvalidEmail(true)
+    }
+
+    const payload = JSON.stringify({
+      email,
+      tags: ['landing_page'],
+      api_key: process.env.NEXT_PUBLIC_CONVERTKIT_API_KEY,
+    })
+
+    try {
+      const response = await fetch(SUBSCRIBE_URL, {
+        method: 'POST',
+        body: payload,
+        headers: {
+          Accept: 'application/json; charset=utf-8',
+          'Content-Type': 'application/json',
+        },
+      })
+
+      const json = await response.json()
+
+      if (json?.subscription?.id) {
+        setStatus(SubscriptionStatus.SUCCESS)
+        setEmail('')
+        setIsInvalidEmail(true)
+        setTimeout(() => setStatus(null), 3000)
+
+        toast({
+          title: 'Joined',
+          description: 'Please check your inbox to confirm the subscription!',
+        })
+        return
+      }
+
+      setStatus(SubscriptionStatus.ERROR)
+      toast({
+        title: 'Oops',
+        description: 'Something went wrong... Please, try again!',
+      })
+      console.error('Failed to subscribe')
+    } catch (err) {
+      setStatus(SubscriptionStatus.ERROR)
+      toast({
+        title: 'Oops',
+        description: 'Something went wrong... Please, try again!',
+      })
+      console.error(err)
+    }
+  }
+
 
   return (
     <div className="pt-12 md:pt-0 px-8 md:pl-12 lg:pl-20">
@@ -32,8 +101,14 @@ const Banner = () => {
           </h3>
 
           <div className="grid grid-cols-2 gap-2 mt-10">
-            <Input placeholder="Enter your email" className="col-start-1 col-end-4 md:col-start-1 md:col-end-4" />
+            <Input
+              onChange={(e) => onChangeEmail(e.target.value)}
+              value={email}
+              placeholder="Enter your email"
+              className="col-start-1 col-end-4 md:col-start-1 md:col-end-4" />
+
             <Button
+              disabled={isInvalidEmail}
               onClick={joinWaitList} className="col-start-1 col-end-4 md:col-start-4">Join Wait List</Button>
           </div>
         </div>

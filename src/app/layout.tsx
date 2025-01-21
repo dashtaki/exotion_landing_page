@@ -5,6 +5,7 @@ import { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 import CookieConsent from 'react-cookie-consent'
 import { COOKIE_NAME } from '@/contants'
+import { Toaster } from '@/components/ui/toaster'
 // import { GoogleTagManager } from '@next/third-parties/google'
 
 const poppins = Poppins({
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         We Use Cookies to Enhance Your Experience and Protect Your Privacy!
       </CookieConsent>
+      <Toaster />
     </html>
   )
 }

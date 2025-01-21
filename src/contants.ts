@@ -2,6 +2,8 @@ import { SectionDetail } from '@/components/Section'
 
 export const BRAND = 'Exotion'
 export const COOKIE_NAME = 'CookieConsent'
+export const FORM_ID = process.env.NEXT_PUBLIC_CONVERTKIT_FORM_ID
+export const SUBSCRIBE_URL = `${process.env.NEXT_PUBLIC_CONVERTKIT_API_URL}/forms/${FORM_ID}/subscribe`
 
 export const SECTIONS: SectionDetail[] = [
   {
