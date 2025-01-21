@@ -48,8 +48,8 @@ const Banner = () => {
         </div>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full my-32 gap-12">
-        <h2 className="text-3xl md:text-5xl lg:text-4xl my-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full my-20 sm:my-32 gap-12">
+        <h2 className="text-3xl md:text-5xl lg:text-4xl my-auto text-center md:text-start">
           Create and Complete <span className="font-bold">Challenges</span> Anywhere!
         </h2>
 

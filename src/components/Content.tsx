@@ -32,7 +32,7 @@ const Content = () => {
 
   return (
     <section className="px-8 md:pl-12 lg:pl-20">
-      <div className="sticky -top-4 h-0">
+      <div className="sticky top-0 hidden md:block">
         <Image
           src={currentImage}
           alt={'props.title'}
@@ -45,6 +45,7 @@ const Content = () => {
       {SECTIONS.map((item, i) => (
         <Section
           key={i}
+          index={i}
           title={item.title}
           description={item.description}
           sectionRef={(el) => {
