@@ -4,28 +4,23 @@ import Section from '@/components/Section'
 import { SECTIONS } from '@/contants'
 
 const Content = () => {
-  const sectionRefs = useRef([]) // Array of refs for each section
-  const [currentImage, setCurrentImage] = useState('PHONE_1.svg') // State for current image
+  const sectionRefs = useRef<HTMLElement[]>([])
+  const [currentImage, setCurrentImage] = useState('PHONE_1.svg')
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check each section's position
-      sectionRefs.current.forEach((section, index) => {
+      sectionRefs.current.forEach((section: HTMLElement, index: number) => {
         if (section) {
           const rect = section.getBoundingClientRect()
-          // Check if the section is in view
           if (rect.top >= 0 && (rect.top + 150) <= window.innerHeight / 2) {
-            console.log(rect.top , window.innerHeight / 2)
-            setCurrentImage(`PHONE_${index}.svg`) // Change the image
+            setCurrentImage(`PHONE_${index}.svg`)
           }
         }
       })
     }
 
-    // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll)
 
-    // Cleanup
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
@@ -48,7 +43,9 @@ const Content = () => {
           key={i}
           title={item.title}
           description={item.description}
-          ref={(el) => (sectionRefs.current[i] = el)} // Assign ref to each section
+          sectionRef={(el) => {
+            sectionRefs.current[i] = el as HTMLDivElement
+          }}
         />
       ))}
     </section>
