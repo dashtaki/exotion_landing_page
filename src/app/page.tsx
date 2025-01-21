@@ -2,7 +2,7 @@
 
 import Section, { SectionProps } from '@/components/Section'
 import Menu from '@/components/Menu'
-import Banner from '@/components/Banner'
+// import Banner from '@/components/Banner'
 import SubscribeEmail from '@/components/SubscribeEmail'
 import Footer from '@/components/Footer'
 import { useRef } from 'react'
