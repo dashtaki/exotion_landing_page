@@ -45,16 +45,16 @@ const SECTIONS: SectionProps[] = [
 export default function Home() {
   const subscribeEmailRef = useRef(null)
 
-  const onScrollToSubscribeRef = () =>
-    subscribeEmailRef?.current?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    })
+  // const onScrollToSubscribeRef = () =>
+  //   subscribeEmailRef?.current?.scrollIntoView({
+  //     behavior: 'smooth',
+  //     block: 'start',
+  //   })
 
   return (
     <main className='min-h-screen bg-[#4230d7]'>
       <Menu />
-      <Banner onButtonClick={onScrollToSubscribeRef} />
+      {/*<Banner onButtonClick={onScrollToSubscribeRef} />*/}
       {SECTIONS.map((item, i) => (
         <Section key={i} {...item} />
       ))}
