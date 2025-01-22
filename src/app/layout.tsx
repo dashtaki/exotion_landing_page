@@ -42,4 +42,5 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 - implement email subscription
 - google tag manager
 - change favicon
+- husky
 **/
