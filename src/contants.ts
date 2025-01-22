@@ -25,5 +25,5 @@ export const SECTIONS: SectionDetail[] = [
     title: 'Step up and Be a challenger',
     description:
       'Step into the role of a challenger by taking on thrilling tasks, completing them, and showcasing your adventurous side. Not only will you enjoy unique experiences, but you’ll also have the chance to earn money as a reward for your achievements.',
-  }
+  },
 ]

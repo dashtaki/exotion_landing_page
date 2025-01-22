@@ -68,60 +68,69 @@ const Banner = () => {
     }
   }
 
-
   return (
-    <div className="pt-12 md:pt-0 px-8 md:pl-12 lg:pl-20">
-      <section className="grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:gap-20">
-        <div className="flex justify-center flex-col ">
+    <div className='px-8 pt-12 md:pl-12 md:pt-0 lg:pl-20'>
+      <section className='grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:gap-20'>
+        <div className='flex flex-col justify-center'>
           <Image
-            src="/Logo.svg"
-            alt="Experience In Motion"
-            className="object-cover pb-12"
+            src='/Logo.svg'
+            alt='Experience In Motion'
+            className='object-cover pb-12'
             width={100}
             height={50}
           />
 
-          <h2 className="text-6xl md:text-6xl font-semibold pb-6 leading-none">
-            Experience In <span className="text-brand-600">Motion</span>
+          <h2 className='pb-6 text-6xl font-semibold leading-none md:text-6xl'>
+            Experience In <span className='text-brand-600'>Motion</span>
           </h2>
 
-          <h3 className="text-lg font-light md:text-lg">
-            Take on exciting challenges and turn your creativity into cash! make money based on the impressions and view
-            count your submissions generate and get rewarded for your impact!
+          <h3 className='text-lg font-light md:text-lg'>
+            Take on exciting challenges and turn your creativity into cash! make
+            money based on the impressions and view count your submissions
+            generate and get rewarded for your impact!
           </h3>
 
-          <div className="grid grid-cols-2 gap-2 mt-10">
+          <div className='mt-10 grid grid-cols-2 gap-2'>
             <Input
-              type="email"
+              type='email'
               onChange={(e) => onChangeEmail(e.target.value)}
               value={email}
-              placeholder="Enter your email"
-              className="col-start-1 col-end-4 md:col-start-1 md:col-end-4" />
+              placeholder='Enter your email'
+              className='col-start-1 col-end-4 md:col-start-1 md:col-end-4'
+            />
 
             <Button
               disabled={isInvalidEmail}
-              onClick={joinWaitList} className="col-start-1 col-end-4 md:col-start-4">Join Waiting List</Button>
+              onClick={joinWaitList}
+              className='col-start-1 col-end-4 md:col-start-4'
+            >
+              Join Waiting List
+            </Button>
           </div>
         </div>
 
-        <div className="flex">
+        <div className='flex'>
           <Image
-            src="/BannerScreenshot.svg"
-            alt="Experience In Motion"
+            src='/BannerScreenshot.svg'
+            alt='Experience In Motion'
             width={540}
             height={600}
           />
         </div>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full my-20 sm:my-32 gap-12">
-        <h2 className="text-3xl md:text-5xl lg:text-4xl my-auto text-center md:text-start">
-          Create and Complete <span className="font-bold">Challenges</span> Anywhere!
+      <div className='my-20 grid w-full grid-cols-1 gap-12 sm:my-32 md:grid-cols-2'>
+        <h2 className='my-auto text-center text-3xl md:text-start md:text-5xl lg:text-4xl'>
+          Create and Complete <span className='font-bold'>Challenges</span>{' '}
+          Anywhere!
         </h2>
 
-        <p className="text-lg text-center md:text-start">Be My Guest connects you with a world of unique experiences.
-          Create challenges, set rewards, and let others capture the moments for you. Or, take on exciting challenges
-          and earn rewards by sharing your adventures!</p>
+        <p className='text-center text-lg md:text-start'>
+          Be My Guest connects you with a world of unique experiences. Create
+          challenges, set rewards, and let others capture the moments for you.
+          Or, take on exciting challenges and earn rewards by sharing your
+          adventures!
+        </p>
       </div>
     </div>
   )

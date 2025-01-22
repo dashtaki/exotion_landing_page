@@ -17,7 +17,7 @@ const Content = () => {
         }
 
         const rect = section.getBoundingClientRect()
-        if (rect.top >= 0 && (rect.top + 150) <= window.innerHeight / 2) {
+        if (rect.top >= 0 && rect.top + 150 <= window.innerHeight / 2) {
           setCurrentImage(`PHONE_${index}.svg`)
         }
       })
@@ -31,14 +31,14 @@ const Content = () => {
   }, [])
 
   return (
-    <section className="px-8 md:pl-12 lg:pl-20">
-      <div className="sticky top-0 hidden md:block">
+    <section className='px-8 md:pl-12 lg:pl-20'>
+      <div className='sticky top-0 hidden md:block'>
         <Image
           src={currentImage}
           alt={'props.title'}
           width={250}
           height={300}
-          className="mr-9 mt-20 rounded-lg transition duration-500 ease-in-out absolute sm:right-0 md:right-0 md:mr-0 xl:right-32"
+          className='absolute mr-9 mt-20 rounded-lg transition duration-500 ease-in-out sm:right-0 md:right-0 md:mr-0 xl:right-32'
         />
       </div>
 

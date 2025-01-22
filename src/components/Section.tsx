@@ -5,15 +5,15 @@ export interface SectionDetail {
   index?: number
   title: string
   description: string
-  sectionRef?: Ref<HTMLDivElement>;
+  sectionRef?: Ref<HTMLDivElement>
 }
 
 const Section = ({ index, title, description, sectionRef }: SectionDetail) => {
   return (
-    <section ref={sectionRef} className="py-8 md:py-48">
-      <div className="grid-cols-1 w-full md:w-1/2">
-        <h2 className="text-4xl md:text-5xl mb-8 sm:mb-12">{title}</h2>
-        <p className="text-lg">{description}</p>
+    <section ref={sectionRef} className='py-8 md:py-48'>
+      <div className='w-full grid-cols-1 md:w-1/2'>
+        <h2 className='mb-8 text-4xl sm:mb-12 md:text-5xl'>{title}</h2>
+        <p className='text-lg'>{description}</p>
       </div>
 
       <Image
@@ -21,7 +21,7 @@ const Section = ({ index, title, description, sectionRef }: SectionDetail) => {
         alt={'props.title'}
         width={250}
         height={300}
-        className="block sm:hidden mx-auto mt-8"
+        className='mx-auto mt-8 block sm:hidden'
       />
     </section>
   )

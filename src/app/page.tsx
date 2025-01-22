@@ -4,8 +4,8 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <div className="m-auto max-w-screen-2xl">
+    <main className='min-h-screen'>
+      <div className='m-auto max-w-screen-2xl'>
         <Banner />
         <Content />
       </div>
