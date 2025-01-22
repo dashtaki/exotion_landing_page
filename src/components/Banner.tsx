@@ -86,8 +86,8 @@ const Banner = () => {
           </h2>
 
           <h3 className="text-lg font-light md:text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.
+            Take on exciting challenges and turn your creativity into cash! make money based on the impressions and view
+            count your submissions generate and get rewarded for your impact!
           </h3>
 
           <div className="grid grid-cols-2 gap-2 mt-10">
