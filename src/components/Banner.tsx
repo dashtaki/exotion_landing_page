@@ -92,6 +92,7 @@ const Banner = () => {
 
           <div className="grid grid-cols-2 gap-2 mt-10">
             <Input
+              type="email"
               onChange={(e) => onChangeEmail(e.target.value)}
               value={email}
               placeholder="Enter your email"
@@ -99,7 +100,7 @@ const Banner = () => {
 
             <Button
               disabled={isInvalidEmail}
-              onClick={joinWaitList} className="col-start-1 col-end-4 md:col-start-4">Join Wait List</Button>
+              onClick={joinWaitList} className="col-start-1 col-end-4 md:col-start-4">Join Waiting List</Button>
           </div>
         </div>
 
