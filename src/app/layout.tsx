@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 import CookieConsent from 'react-cookie-consent'
 import { COOKIE_NAME } from '@/contants'
 import { Toaster } from '@/components/ui/toaster'
-// import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -20,7 +20,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang='en'>
       <body className={cn(poppins.className, 'antialiased')}>{children}</body>
 
-      {/*{process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />}*/}
+      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS &&
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+      }
 
       <CookieConsent
         location='bottom'
@@ -39,8 +41,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
 /* TODO List:
 - Change Logo To Exotion
-- implement email subscription
-- google tag manager
 - change favicon
 - husky
 **/
