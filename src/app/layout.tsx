@@ -38,8 +38,3 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   )
 }
-
-/* TODO List:
-- Change Logo To Exotion
-- husky
-**/

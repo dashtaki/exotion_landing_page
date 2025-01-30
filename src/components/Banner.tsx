@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import { Input } from '@/components/ui/input'
 import { isValidEmail } from '@/lib/utils'
-import { SUBSCRIBE_URL } from '@/contants'
+import { BRAND, SUBSCRIBE_URL } from '@/contants'
 import { toast } from '@/hooks/use-toast'
 
 const Banner = () => {
@@ -76,12 +76,12 @@ const Banner = () => {
             src='/Logo.svg'
             alt='Experience In Motion'
             className='object-cover pb-12'
-            width={100}
-            height={50}
+            width={200}
+            height={100}
           />
 
           <h2 className='pb-6 text-6xl font-semibold leading-none md:text-6xl'>
-            Experience In <span className='text-brand-600'>Motion</span>
+            <span className='text-brand-600'>Ex</span>perience In M<span className='text-brand-600'>otion</span>
           </h2>
 
           <h3 className='text-lg font-light md:text-lg'>
@@ -126,7 +126,7 @@ const Banner = () => {
         </h2>
 
         <p className='text-center text-lg md:text-start'>
-          Be My Guest connects you with a world of unique experiences. Create
+          {BRAND} connects you with a world of unique experiences. Create
           challenges, set rewards, and let others capture the moments for you.
           Or, take on exciting challenges and earn rewards by sharing your
           adventures!

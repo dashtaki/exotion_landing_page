@@ -11,7 +11,7 @@ const Footer = () => {
 
         <div className='mx-auto max-w-6xl space-y-4 text-center md:space-y-6'>
           <h3 className='text-sm uppercase tracking-wider'>Contact</h3>
-          <p className='text-3xl font-light'>{`info@${BRAND}.com`}</p>
+          <p className='text-3xl font-light'>{`info@${BRAND.toLocaleLowerCase()}.com`}</p>
         </div>
       </div>
 
