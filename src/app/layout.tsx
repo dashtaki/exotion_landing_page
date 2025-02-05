@@ -23,15 +23,17 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang='en'>
-      <body className={cn(poppins.className, 'antialiased')}>{children}</body>
+      <body className={cn(poppins.className, 'antialiased')}>
+        {children}
 
-      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
-        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-      )}
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        )}
 
-      <CookieConsentDialog />
+        <CookieConsentDialog />
 
-      <Toaster />
+        <Toaster />
+      </body>
     </html>
   )
 }
