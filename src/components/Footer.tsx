@@ -1,3 +1,5 @@
+'use client'
+
 import { BRAND } from '@/contants'
 
 const Footer = () => {
